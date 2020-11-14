@@ -25,9 +25,19 @@ end
 ]]
 
 function love.draw()
+
 --[[
-    
+    love.graphics
+    -The primary responsibility for the love.graphics module is the drawing of lines, shapes, text, Images and other Drawable objects onto the screen.
+    -Its secondary responsibilities include loading external files (including Images and Fonts) into memory, creating specialized objects (such as ParticleSystems or 
+    Canvases) and managing screen geometry.
 ]]
-    love.graphics.print("Hello World", 400, 300)
+
+    love.graphics.printf(
+        'Hello Pong!',          -- text to render
+        0,                      -- starting X (0 since we're going to center it based on width)
+        WINDOW_HEIGHT / 2 - 6,  -- starting Y (halfway down the screen)
+        WINDOW_WIDTH,           -- number of pixels to center within (the entire screen here)
+        'center')               -- alignment mode, can be 'center', 'left', or 'right'
 end
 
